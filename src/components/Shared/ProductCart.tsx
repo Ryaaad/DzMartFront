@@ -41,7 +41,7 @@ const ProductCart: React.FC<props> = ({ name,price,fav,unitsnbr,rating }) => {
       <div className="flex gap-2 text-xs items-center">
         <p className="uppercase"> {unitsnbr} unit </p>
         <div className="flex items-center gap-1">
-        <FaStar className="text-[#ffc43f]" />
+        <FaStar className="text-scdOrang" />
         <p className="font-semibold">  {rating} </p>
 
         </div>

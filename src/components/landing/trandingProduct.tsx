@@ -17,15 +17,15 @@ const TrandingProduct: React.FC<props> = () => {
       <h1 className="text-black font-semibold text-base pb-3 lg:pb-5 sm:text-2xl xl:text-3xl">Trending Products</h1>
       <div className="flex items-center gap-10 sm:gap-6 uppercase text-xs sm:text-base ">
         <h1 onClick={()=>handelFilter("ALL")}
-        className={`${Filter=="ALL" && "border-b-2 border-b-solid border-b-[#ffc43f]" } hover:text-[#333333] text-[#787878] cursor-pointer pb-3 lg:pb-5 `}>
+        className={`${Filter=="ALL" && "border-b-2 border-b-solid border-b-scdOrang" } hover:text-[#333333] text-[#787878] cursor-pointer pb-3 lg:pb-5 `}>
           ALL
         </h1>
         <h1 onClick={()=>handelFilter("FRUITS")}
-        className={`${Filter=="FRUITS" && "border-b-2 border-b-solid border-b-[#ffc43f]" } hover:text-[#333333] text-[#787878] cursor-pointer pb-3 lg:pb-5 `}>
+        className={`${Filter=="FRUITS" && "border-b-2 border-b-solid border-b-scdOrang" } hover:text-[#333333] text-[#787878] cursor-pointer pb-3 lg:pb-5 `}>
           FRUITS & VEGES
         </h1>
         <h1 onClick={()=>handelFilter("JUICES")}
-        className={`${Filter=="JUICES" && "border-b-2 border-b-solid border-b-[#ffc43f]" } hover:text-[#333333] text-[#787878] cursor-pointer pb-3 lg:pb-5 `}>
+        className={`${Filter=="JUICES" && "border-b-2 border-b-solid border-b-scdOrang" } hover:text-[#333333] text-[#787878] cursor-pointer pb-3 lg:pb-5 `}>
           JUICES
         </h1>
       </div>
