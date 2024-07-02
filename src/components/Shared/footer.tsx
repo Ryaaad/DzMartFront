@@ -13,7 +13,7 @@ export default function Footer() {
           <Image src={logo} alt="logo" className="w-auto h-8 sm:h-10 md:h-[52px] lg:h-14 " height={54}></Image>
           <div className="">
             <h1 className="font-bold text-lg tracking-wider sm:text-2xl md:text-3xl 2xl:text-4xl">
-              DZIR<strong className="text-[#ffc43f]">MART </strong>
+              DZIR<strong className="text-scdOrang">MART </strong>
             </h1>
             <p className="uppercase text-gray-400 text-[10px] tracking-[0.1rem] sm:text-xs sm:tracking-[0.2rem] md:text-sm md:tracking-[0.27rem] 2xl:text-base 2xl:tracking-[.35rem] "> Grocery STORE </p>
           </div>
