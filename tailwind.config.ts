@@ -18,6 +18,7 @@ const config: Config = {
         borderGray: '#F7F7F7',
         inputGray: '#F9F9F9',
         btnGray:'#747474',
+        btnscnd:'#f8f9fa',
         scdOrang:"#ffc43f"
       },
       // bg_border
