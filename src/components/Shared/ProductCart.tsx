@@ -24,9 +24,9 @@ const ProductCart: React.FC<props> = ({ name,price,fav,unitsnbr,rating }) => {
   return (
     <div
       style={{ boxShadow: "0px 5px 22px rgba(0, 0, 0, 0.04)" }}
-      className="bg-white rounded-2xl flex flex-col justify-start h-max gap-2 w-full p-3 sm:gap-3 sm:p-4 sm:py-5"
+      className="bg-white rounded-2xl flex flex-col justify-start h-max gap-2 w-full p-3 sm:gap-3 sm:p-4"
     >
-        <div className="items-center cursor-pointer relative grid justify-center bg-[#f9f9f9] rounded-2xl">
+        <div className="items-center cursor-pointer relative grid justify-center bg-inputGray rounded-xl">
       <Image
         alt="Image"
         src={Productimg}

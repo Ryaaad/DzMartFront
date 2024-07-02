@@ -19,23 +19,23 @@ export default function Footer() {
           </div>
         </div>
         <ul className="flex items-center gap-1 sm:gap-2 2xl:gap-3">
-          <li className="cursor-pointer hover:bg-[#F8F8F8] hover:text-[#000] grid items-center justify-center text-[#747474] 
+          <li className="cursor-pointer hover:bg-[#F8F8F8] hover:text-[#000] grid items-center justify-center text-btnGray 
           rounded-md border border-b-[#EFEFEF] border-solid text-sm h-6 w-6 sm:h-8 sm:w-8 sm:text-lg md:text-xl md:h-[38px] md:w-[42px] 2xl:h-10 2xl:w-11 ">
           <TiSocialFacebook />
           </li>
-          <li className="cursor-pointer hover:bg-[#F8F8F8] hover:text-[#000] grid items-center justify-center text-[#747474] 
+          <li className="cursor-pointer hover:bg-[#F8F8F8] hover:text-[#000] grid items-center justify-center text-btnGray 
           rounded-md border border-b-[#EFEFEF] border-solid text-sm h-6 w-6 sm:h-8 sm:w-8 sm:text-lg md:text-xl md:h-[38px] md:w-[42px] 2xl:h-10 2xl:w-11 ">
           <CiTwitter />
           </li>
-          <li className="cursor-pointer hover:bg-[#F8F8F8] hover:text-[#000] grid items-center justify-center text-[#747474] 
+          <li className="cursor-pointer hover:bg-[#F8F8F8] hover:text-[#000] grid items-center justify-center text-btnGray 
           rounded-md border border-b-[#EFEFEF] border-solid text-sm h-6 w-6 sm:h-8 sm:w-8 sm:text-lg md:text-xl md:h-[38px] md:w-[42px] 2xl:h-10 2xl:w-11 ">
           <IoLogoInstagram />
           </li>
-          <li className="cursor-pointer hover:bg-[#F8F8F8] hover:text-[#000] grid items-center justify-center text-[#747474] 
+          <li className="cursor-pointer hover:bg-[#F8F8F8] hover:text-[#000] grid items-center justify-center text-btnGray 
           rounded-md border border-b-[#EFEFEF] border-solid text-sm h-6 w-6 sm:h-8 sm:w-8 sm:text-lg md:text-xl md:h-[38px] md:w-[42px] 2xl:h-10 2xl:w-11 ">
           <PiYoutubeLogo />
           </li>
-          <li className="cursor-pointer hover:bg-[#F8F8F8] hover:text-[#000] grid items-center justify-center text-[#747474] 
+          <li className="cursor-pointer hover:bg-[#F8F8F8] hover:text-[#000] grid items-center justify-center text-btnGray 
           rounded-md border border-b-[#EFEFEF] border-solid text-sm h-6 w-6 sm:h-8 sm:w-8 sm:text-lg md:text-xl md:h-[38px] md:w-[42px] 2xl:h-10 2xl:w-11">
           <TiSocialLinkedin />
           </li>
@@ -43,9 +43,9 @@ export default function Footer() {
       </div>
       <div className="w-52 sm:w-60 lg:w-96">
         <h1 className="text-black sm:text-lg font-semibold w-max 2xl:text-2xl ">Our Newsletter</h1>
-        <p className="text-[#747474] leading-4 text-xs my-2 pr-2 sm:leading-5 sm:my-3 sm:pr-3 sm:text-sm lg:text-base lg:leading-7 2xl:text-lg 2xl:leading-9 ">Subscribe to our newsletter to get updates about our grand offers.</p>
+        <p className="text-btnGray leading-4 text-xs my-2 pr-2 sm:leading-5 sm:my-3 sm:pr-3 sm:text-sm lg:text-base lg:leading-7 2xl:text-lg 2xl:leading-9 ">Subscribe to our newsletter to get updates about our grand offers.</p>
         <div className="flex items-center mt-1 2xl:mt-2">
-            <input type="email" placeholder="Email Address" className="p-3 bg-[#F8F8F8] text-[#747474] rounded-l-md w-2/3 h-8 text-xs sm:h-10 sm:text-sm lg:text-base 2xl:h-12 2xl:p-4"/>
+            <input type="email" placeholder="Email Address" className="p-3 bg-[#F8F8F8] text-btnGray rounded-l-md w-2/3 h-8 text-xs sm:h-10 sm:text-sm lg:text-base 2xl:h-12 2xl:p-4"/>
             <button className="bg-[#212529] p-2 text-[#fff] rounded-r-md h-8 text-xs sm:h-10 sm:text-sm lg:text-base 2xl:h-12 2xl:p-3 ">Subscrib</button>
             </div>
       </div>
