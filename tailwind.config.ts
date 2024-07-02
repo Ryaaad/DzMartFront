@@ -14,6 +14,12 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         'patterned': "url('/images/background-pattern.jpg')",
       },
+      colors: {
+        borderGray: '#F7F7F7',
+        inputGray: '#F9F9F9',
+        btnGray:'#747474'
+      },
+      // bg_border
     },
   },
   plugins: [],
