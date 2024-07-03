@@ -5,10 +5,14 @@ import Image, { StaticImageData } from "next/image";
 import Test from "../../../../../public/images/product/productExmpl.jpg";
 import Test2 from "../../../../../public/images/product/product-exmpl-2.jpg";
 import { FaRegHeart, FaStar } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { GrUser } from "react-icons/gr";
+import Reviews from "@/components/signleProduct/Reviews";
 
 export default function Home() {
   const [unitAdd, setunitAdd] = useState(1);
+  const [ReviewScore, setReviewScore] = useState(0);
+
   function handleAddClick() {
     setunitAdd((prev) => (prev = prev + 1));
   }
@@ -21,7 +25,8 @@ export default function Home() {
     setfocusImg(img);
   };
   return (
-    <div className="w-full flex my-6 p-3 gap-8 flex-col items-start lg:flex-row xl:gap-12 sm:p-4 sm:py-3 md:p-5 md:my-8 2xl:px-12">
+    <div className="w-full p-3 sm:p-4 md:p-5 2xl:px-12 ">
+    <div className="w-full flex my-6 gap-8 flex-col items-start lg:flex-row xl:gap-12 sm:py-3 md:my-8">
       <div className="flex gap-4 flex-col-reverse w-full lg:items-start lg:w-auto lg:flex-row lg:h-[500px] xl:h-[615px] ">
         <div className="flex w-full h-full justify-between lg:flex-col ">
           <Image
@@ -141,6 +146,55 @@ export default function Home() {
           </div>
         </div>
       </div>
+    </div>
+    <div className="grid gap-3 md:gap-2 justify-between w-full my-2 grid-cols-2 md:grid-cols-3 ">
+        <div className="hidden md:block">
+    <Reviews ReviewScore={ReviewScore} setReviewScore={setReviewScore} />
+        </div>
+        <div className="flex text-btnGray gap-3">
+            <div className="rounded-full items-center flex justify-center bg-inputGray h-9 w-9 sm:h-10 sm:w-10 lg:h-14 lg:w-14 ">
+           <GrUser className=" text-black text-xl sm:text-2xl lg:text-3xl" />
+            </div>
+            <div className="">
+            <div className="flex items-center text-xs gap-1 lg:gap-2 xl:gap-3">
+          <FaStar className="text-scdOrang" />
+          <FaStar className="text-scdOrang" />
+          <FaStar className="text-scdOrang" />
+          <FaStar className="text-[#e6f3fb]" />
+          <FaStar className="text-[#e6f3fb]" />
+          <p className="text-xs lg:text-base"> (3.5) </p>
+        </div>
+        <h2 className="text-xs sm:text-sm lg:text-base ">Jenny Willis – 03/06/2022</h2>
+                 <p className="max-w-[46vw] text-xs leading-4 sm:leading-5  sm:text-sm lg:text-base lg:leading-7  ">
+          Justo, cum feugiat imperdiet nulla molestie ac vulputate scelerisque
+          amet. Bibendum adipiscing platea blandit.
+        </p>
+            </div>
+        </div>
+        <div className="flex text-btnGray gap-3">
+            <div className="rounded-full items-center flex justify-center bg-inputGray h-9 w-9 sm:h-10 sm:w-10 lg:h-14 lg:w-14 ">
+           <GrUser className=" text-black text-xl sm:text-2xl lg:text-3xl" />
+            </div>
+            <div className="">
+            <div className="flex items-center text-xs gap-1 lg:gap-2 xl:gap-3">
+          <FaStar className="text-scdOrang" />
+          <FaStar className="text-scdOrang" />
+          <FaStar className="text-scdOrang" />
+          <FaStar className="text-[#e6f3fb]" />
+          <FaStar className="text-[#e6f3fb]" />
+          <p className="text-xs lg:text-base"> (3.5) </p>
+        </div>
+        <h2 className="text-xs sm:text-sm lg:text-base ">Jenny Willis – 03/06/2022</h2>
+                 <p className="max-w-[46vw] text-xs leading-4 sm:leading-5  sm:text-sm lg:text-base lg:leading-7  ">
+          Justo, cum feugiat imperdiet nulla molestie ac vulputate scelerisque
+          amet. Bibendum adipiscing platea blandit.
+        </p>
+            </div>
+        </div>
+    </div>
+    <div className="block md:hidden">
+    <Reviews ReviewScore={ReviewScore} setReviewScore={setReviewScore} />
+        </div>
     </div>
   );
 }
