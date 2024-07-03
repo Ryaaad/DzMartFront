@@ -4,6 +4,7 @@ import Productimg from "../../../public/images/product/thumb-bananas.png";
 import { FaRegHeart, FaStar } from "react-icons/fa";
 import { useState } from "react";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
+import Link from "next/link";
 
 interface props {
   name: string;
@@ -26,7 +27,7 @@ const ProductCart: React.FC<props> = ({ name,price,fav,unitsnbr,rating }) => {
       style={{ boxShadow: "0px 5px 22px rgba(0, 0, 0, 0.04)" }}
       className="bg-white rounded-2xl flex flex-col justify-start h-max gap-2 w-full p-3 sm:gap-3 sm:p-4"
     >
-        <div className="items-center cursor-pointer relative grid justify-center bg-inputGray rounded-xl">
+        <Link href={`/shop/1`} className="items-center cursor-pointer relative grid justify-center bg-inputGray rounded-xl">
       <Image
         alt="Image"
         src={Productimg}
@@ -36,7 +37,7 @@ const ProductCart: React.FC<props> = ({ name,price,fav,unitsnbr,rating }) => {
       h-9 w-9 sm:h-11 sm:w-11 ">
       <FaRegHeart />
       </div>
-        </div>
+        </Link>
       <h1 className="font-semibold tracking-wider text-mg "> {name}</h1>
       <div className="flex gap-2 text-xs items-center">
         <p className="uppercase"> {unitsnbr} unit </p>
