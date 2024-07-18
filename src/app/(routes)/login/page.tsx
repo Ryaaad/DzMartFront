@@ -1,17 +1,40 @@
 "use client";
+import { useFetchPost } from "@/hooks/useFetchPost";
 import { useRouter } from "next/navigation";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
 export default function Home() {
   const router = useRouter();
-  const [user, setuser] = useState<string | undefined>();
+  const [email, setemail] = useState<string | undefined>();
   const [password, setpassword] = useState<string | undefined>();
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const [Submit,setSubmit]=useState(false)
+  const [input, setInput] = useState({ Email: '', Password: '' });
+
+  const { data, error, loading, fetchData } = useFetchPost({ path: 'http://localhost:8000/users/login', input });
+  const handlePswdChange=(e:string)=>{
+    let pswd=input
+    pswd.Password=e
+   setInput(pswd)
+  }
+  const handleEmailChange=(e:string)=>{
+    let email=input
+    email.Email=e
+   setInput(email)
+  }
+  useEffect(() => {
+    if(loading===false && Submit===true){
+      setSubmit(false)
+      if (error==null){
+        router.push("/")
+       }
+    }
+  }, [loading]);
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(password);
-    console.log(user);
-    router.push("/");
+    setSubmit(true)
+    await fetchData(); 
   };
+  
   return (
     <div className="w-full h-screen flex items-center justify-center bg-patterned bg-cover ">
       <form
@@ -24,15 +47,15 @@ export default function Home() {
           <input
             type="text"
             name="user"
-            onChange={(e) => setuser(e.target.value)}
+            onChange={(e) => handleEmailChange(e.target.value)}
             className="p-2 border border-solid border-borderGray rounded-md pl-3 w-full"
-            placeholder="Username / email"
+            placeholder="Email"
             required
           />
           <input
             type="password"
             name="password"
-            onChange={(e) => setpassword(e.target.value)}
+            onChange={(e) => handlePswdChange(e.target.value)}
             className="p-2 border border-solid border-borderGray rounded-md pl-3 w-full"
             placeholder="Password"
             required
@@ -55,6 +78,10 @@ export default function Home() {
           {" "}
           Forget your password?{" "}
         </button>
+        {error!=null && 
+        <p className="text-red-500 font-semibold text-center w-full">
+         Email or Password uncorrect
+          </p>}
       </form>
     </div>
   );
